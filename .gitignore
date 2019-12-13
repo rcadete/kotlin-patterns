@@ -1,8 +1,7 @@
-### Idea ###
-.idea/
-*iml
-
 ### Gradle ###
-build/
+.gradle
+build
 
-
+### Idea ###
+.idea
+*.iml
