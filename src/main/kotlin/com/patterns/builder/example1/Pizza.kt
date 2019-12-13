@@ -1,6 +1,6 @@
 package com.patterns.builder.example1
 
-data class Pizza(var dough: String? = null,
+class Pizza(var dough: String? = null,
                  var sauce: String? = null,
                  var cheese: String? = null,
                  var toppings: String? = null,

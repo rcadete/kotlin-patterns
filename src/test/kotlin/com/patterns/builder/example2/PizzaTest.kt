@@ -1,21 +1,20 @@
-package com.patterns.builder.example1
-
-import org.junit.Test
+package com.patterns.builder.example2
 
 import org.junit.Assert.*
+import org.junit.Test
 
 class PizzaTest {
 
     @Test
-    fun testPizza() {
+    fun testPizza(){
         // when
-        val neapolitanPizza = Pizza.PizzaBuilder()
-                .withDough("crust")
-                .withSauce("tomato")
-                .withCheese("mozzarella")
-                .withToppings("tomatoes, olive oil")
-                .withGarnish("basil, leaves, oregano")
-                .build()
+        val neapolitanPizza = Pizza.build {
+            dough = "crust"
+            sauce = "tomato"
+            cheese = "mozzarella"
+            toppings = "tomatoes, olive oil"
+            garnish = "basil, leaves, oregano"
+        }
 
         // then
         assertNotNull(neapolitanPizza)
