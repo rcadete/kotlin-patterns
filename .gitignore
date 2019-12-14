@@ -5,3 +5,7 @@ build
 ### Idea ###
 .idea
 *.iml
+
+
+### 
+logs/

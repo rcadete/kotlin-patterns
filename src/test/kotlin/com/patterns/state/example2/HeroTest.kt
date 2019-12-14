@@ -43,7 +43,6 @@ class HeroTest {
         assertEquals("Hero is retrating!", appender.lastMessage)
         assertEquals(3, appender.logSize)
 
-
         hero.timePassed()
         hero.showMood()
         assertEquals("Hero is aggressive!", appender.lastMessage)
