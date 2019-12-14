@@ -6,14 +6,14 @@ import org.mockito.Mockito.*
 class StrategyContextTest {
 
     @Test
-    fun testArrange() {
+    fun testSort() {
         // given
         val input = arrayOf(1,2,3,4,5)
 
         // when
         val strategy = mock(BubbleSort::class.java)
         val context = StrategyContext(strategy)
-        context.arrange(input)
+        context.sort(input)
 
         // then
         verify(strategy).sort(input)
@@ -26,20 +26,20 @@ class StrategyContextTest {
         // given
         val input = arrayOf(1,2,3,4,5)
 
-        // when
+        // when use initial strategy
         val initialStrategy = mock(BubbleSort::class.java)
         val context = StrategyContext(initialStrategy)
-        context.arrange(input)
+        context.sort(input)
 
         // then
         verify(initialStrategy).sort(input)
 
-        // when
+        // when change strategy
         val newStrategy = mock(QuickSort::class.java)
         context.changeStrategy(newStrategy)
 
         // then
-        context.arrange(input)
+        context.sort(input)
         verify(newStrategy).sort(input)
 
         verifyNoMoreInteractions(initialStrategy, newStrategy)

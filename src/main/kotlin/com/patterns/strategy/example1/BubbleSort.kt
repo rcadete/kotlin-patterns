@@ -3,11 +3,11 @@ package com.patterns.strategy.example1
 import org.slf4j.LoggerFactory
 
 
-class BubbleSort : SortStrategy {
+class BubbleSort : SortAlgorithm {
 
     private val logger = LoggerFactory.getLogger(BubbleSort::class.java)
 
-    override fun sort(numbers: Array<Int>) {
+    override fun sort(arr: Array<Int>) {
         logger.info("Sorting array using bubble sort strategy!")
     }
 }
